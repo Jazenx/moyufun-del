@@ -1,0 +1,36 @@
+{
+	"root": true,
+	"extends": "airbnb",
+	"env": {
+		"browser": true,
+		"node": true,
+		"es6": true
+	},
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true,
+			"experimentalObjectRestSpread": true
+		}
+	},
+	"settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["./src"]
+      }
+    }
+	},
+	"plugins": [
+    "react-hooks"
+  ],
+	"rules": {
+		"react-hooks/rules-of-hooks": "error",
+		"semi": ["error", "never"],
+		"comma-dangle": ["error", "never"],
+		"jsx-quotes": ["off", "prefer-single"],
+		"function-paren-newline": ["off"],
+		"object-curly-newline": ["off"],
+		"import/no-unresolved": [2, { "caseSensitive": false }
+   ]
+	}
+}
