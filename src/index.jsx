@@ -1,13 +1,12 @@
 /* eslint-disable react/button-has-type */
 import ReactDOM from 'react-dom'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
-import createSagaMiddleware from 'react-saga'
+import createSagaMiddleware from 'redux-saga'
 import rootReducer from './reducers'
 import rootSaga from './sagas'
-import './style/index.styl'
 import App from './views/app'
 
 const sagaMiddleware = createSagaMiddleware()

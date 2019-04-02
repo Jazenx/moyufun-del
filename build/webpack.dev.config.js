@@ -16,8 +16,8 @@ module.exports = merge(baseWebpackConfig, {
     port: '8888',
     open: true, // 启用 open 后，dev server 会打开浏览器
     overlay: { // 当出现编译器错误或警告时，在浏览器中显示全屏覆盖层
-      warnings: true,
-      errors: true
+      warnings: false,
+      errors: false
     },
     publicPath: '/', // 此路径下的打包文件可在浏览器中访问
     proxy: {}, // 代理

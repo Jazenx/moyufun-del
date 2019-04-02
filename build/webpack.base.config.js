@@ -83,11 +83,11 @@ module.exports = {
     new webpack.DefinePlugin({
       VERSION: JSON.stringify(require('../package.json').version) // 控制台打印版本号
     }),
-    new webpack.HashedModuleIdsPlugin() // 避免缓存失败
-    // new CleanWebpackPlugin(['app'], { // 清理打包文件 production
-    //   root: resolve(__dirname, '..'),
-    //   verbose: true,   // Write logs to console
-    //   dry: false
-    // })
+    new webpack.HashedModuleIdsPlugin(),// 避免缓存失败
+    new CleanWebpackPlugin(['app'], { // 清理打包文件 production
+      root: resolve(__dirname, '..'),
+      verbose: true,   // Write logs to console
+      dry: false
+    })
   ]
 }

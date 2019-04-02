@@ -25,12 +25,12 @@
   ],
 	"rules": {
 		"react-hooks/rules-of-hooks": "error",
+		"react/jsx-one-expression-per-line": ["off"],
 		"semi": ["error", "never"],
 		"comma-dangle": ["error", "never"],
 		"jsx-quotes": ["off", "prefer-single"],
 		"function-paren-newline": ["off"],
 		"object-curly-newline": ["off"],
-		"import/no-unresolved": [2, { "caseSensitive": false }
-   ]
+		"import/no-unresolved": [2, { "caseSensitive": false }]
 	}
 }
