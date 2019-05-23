@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react'
+import Demo from './Demo'
 
 function Counter() {
   const [count, setCount] = useState(0)
@@ -29,6 +30,6 @@ function Counter() {
   )
 }
 
-const App = () => <Counter />
+const App = () => <Demo />
 
 export default App
