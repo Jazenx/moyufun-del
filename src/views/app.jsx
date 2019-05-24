@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react'
-import Demo from './Demo'
 
 function Counter() {
   const [count, setCount] = useState(0)
@@ -13,8 +12,7 @@ function Counter() {
 
   useEffect(() => {
     latestCount.current = count
-    setTimeout(() => {
-    }, 3000)
+    setTimeout(() => {}, 3000)
   })
 
   return (

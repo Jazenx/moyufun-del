@@ -17,13 +17,19 @@
     "import/resolver": {
       "node": {
         "paths": ["./src"]
-      }
+			},
+			"webpack":{
+				"config": "./build/webpack.base.config.js",
+				"config-index": 1 
+			}
     }
 	},
 	"plugins": [
-    "react-hooks"
+		"react-hooks",
+		"prettier"
   ],
 	"rules": {
+		"prettier/prettier": "error",
 		"react-hooks/rules-of-hooks": "error",
 		"react/jsx-one-expression-per-line": ["off"],
 		"semi": ["error", "never"],

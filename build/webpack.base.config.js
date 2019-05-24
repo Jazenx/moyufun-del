@@ -14,7 +14,7 @@ module.exports = {
   resolve: { // 配置依赖
     extensions: ['.js', '.jsx', '.styl'],
     alias: {
-      '@': resolve('../src')
+      '@': resolve('src')
     }
   },
   module: {
@@ -42,6 +42,7 @@ module.exports = {
         enforce: 'pre',
         include: [resolve('src')],
         options: {
+          fix: true,
           formatter: require('eslint-friendly-formatter')
         }
       },
