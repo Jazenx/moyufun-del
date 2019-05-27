@@ -1,5 +1,5 @@
-import { enumConstants } from '@/utils/common'
+import { enumConstants } from 'utils/common'
 
-const foo = enumConstants('123')
+export const USER = enumConstants('USER_LOGIN')
 
-console.log(foo)
+export const DEMO2 = enumConstants('INNIT_DATA')

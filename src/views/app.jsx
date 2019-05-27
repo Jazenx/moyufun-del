@@ -1,33 +1,24 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useState } from 'react'
 
 function Counter() {
   const [count, setCount] = useState(0)
-  const latestCount = useRef(count)
-
-  function handleAlertClick() {
-    setTimeout(() => {
-      // alert(`You clicked on:${count}`)
-    }, 3000)
-  }
-
-  useEffect(() => {
-    latestCount.current = count
-    setTimeout(() => {}, 3000)
-  })
+  const increment = () => setCount(count + 1)
+  const decrement = () => setCount(count - 1)
 
   return (
     <div>
-      <p>You clicked {count} times</p>
-      <button type="button" onClick={() => setCount(count + 1)}>
-        Click me
+      <p>Counter</p>
+      <button type="button" onClick={increment}>
+        +
       </button>
-      <button type="button" onClick={handleAlertClick}>
-        Show alert
+      <span>{count}</span>
+      <button type="button" onClick={decrement}>
+        -
       </button>
     </div>
   )
 }
 
-const App = () => <Demo />
+const App = () => <Counter />
 
 export default App

@@ -13,8 +13,4 @@ const demo = createReducer(
   }
 )
 
-const a = createReducer({
-  fuck: 1
-})
-
-export default combineReducers({ demo, a })
+export default combineReducers({ demo })
