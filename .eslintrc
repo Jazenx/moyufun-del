@@ -17,10 +17,6 @@
     "import/resolver": {
       "node": {
         "paths": ["./src"]
-			},
-			"webpack":{
-				"config": "./build/webpack.base.config.js",
-				"config-index": 1 
 			}
     }
 	},

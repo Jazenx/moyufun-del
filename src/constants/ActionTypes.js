@@ -1,5 +1,4 @@
-// import { enumConstants } from '@/utils/common'
-import { enumConstants } from ''
+import { enumConstants } from '@/utils/common'
 
 const foo = enumConstants('123')
 

@@ -12,10 +12,7 @@ module.exports = {
     publicPath: '/' // 静态资源最终访问路径 = output.publicPath + 资源loader或插件等配置路径
   },
   resolve: { // 配置依赖
-    extensions: ['.js', '.jsx', '.styl'],
-    alias: {
-      '@': resolve('src')
-    }
+    extensions: ['.js', '.jsx', '.styl']
   },
   module: {
     rules: [
