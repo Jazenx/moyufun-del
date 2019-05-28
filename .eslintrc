@@ -33,6 +33,7 @@
 		"jsx-quotes": ["off", "prefer-single"],
 		"function-paren-newline": ["off"],
 		"object-curly-newline": ["off"],
-		"import/no-unresolved": [2, { "caseSensitive": false }]
+		"import/no-unresolved": [2, { "caseSensitive": false }],
+		"consistent-return": ["off"]
 	}
 }

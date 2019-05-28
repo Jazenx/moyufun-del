@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   context: resolve(__dirname, '../'), // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和loader
-  entry: ('./src/index.jsx'), // 入口
+  entry: ('./src/client/index.jsx'), // 入口
   output: {
     path: resolve(__dirname, '../app'), // 打包输出目录
     filename: '[name].bundle.js', // 入口文件打包输出的文件名
