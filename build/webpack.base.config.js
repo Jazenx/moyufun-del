@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = {
   context: resolve(__dirname, '../'), // 基础目录，绝对路径，用于从配置中解析入口起点(entry point)和loader
-  entry: ('./src/client/index.jsx'), // 入口
+  entry: ('./src/client/index.tsx'), // 入口
   output: {
     path: resolve(__dirname, '../app'), // 打包输出目录
     filename: '[name].bundle.js', // 入口文件打包输出的文件名
@@ -12,7 +12,7 @@ module.exports = {
     publicPath: '/' // 静态资源最终访问路径 = output.publicPath + 资源loader或插件等配置路径
   },
   resolve: { // 配置依赖
-    extensions: ['.js', '.jsx', '.styl']
+    extensions: ['.ts', '.tsx', '.js', '.jsx', '.styl', '.json']
   },
   module: {
     rules: [
@@ -28,16 +28,16 @@ module.exports = {
           }
         ]
       },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
+      { 
+        test: /\.(ts|tsx)?$/, 
+        loader: 'babel-loader!awesome-typescript-loader',
       },
       {
         test: /\.(js|jsx)$/,
-        loader: 'eslint-loader',
+        loader: 'eslint-loader!babel-loader',
         enforce: 'pre',
         include: [resolve('src')],
+        exclude: /node_modules/,
         options: {
           fix: true,
           formatter: require('eslint-friendly-formatter')

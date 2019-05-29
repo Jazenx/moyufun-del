@@ -6,7 +6,7 @@
 		"node": true,
 		"es6": true
 	},
-	"parser": "babel-eslint",
+	"parser": "typescript-eslint-parser",
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true,
@@ -16,13 +16,17 @@
 	"settings": {
     "import/resolver": {
       "node": {
-        "paths": ["./src"]
+				"paths": ["./src"],
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
 			}
     }
 	},
 	"plugins": [
+		"react",
+		"typescript",
 		"react-hooks",
-		"prettier"
+		"prettier",
+		"import"
   ],
 	"rules": {
 		"prettier/prettier": "error",
@@ -34,6 +38,7 @@
 		"function-paren-newline": ["off"],
 		"object-curly-newline": ["off"],
 		"import/no-unresolved": [2, { "caseSensitive": false }],
-		"consistent-return": ["off"]
+		"consistent-return": ["off"],
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
 	}
 }
