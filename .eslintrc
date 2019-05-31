@@ -31,14 +31,15 @@
 	"rules": {
 		"prettier/prettier": "error",
 		"react-hooks/rules-of-hooks": "error",
-		"react/jsx-one-expression-per-line": ["off"],
+		"react/jsx-one-expression-per-line": "off",
 		"semi": ["error", "never"],
 		"comma-dangle": ["error", "never"],
 		"jsx-quotes": ["off", "prefer-single"],
-		"function-paren-newline": ["off"],
-		"object-curly-newline": ["off"],
+		"function-paren-newline": "off",
+		"object-curly-newline": "off",
 		"import/no-unresolved": [2, { "caseSensitive": false }],
-		"consistent-return": ["off"],
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
+		"consistent-return": "off",
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+		"no-console": "off"
 	}
 }

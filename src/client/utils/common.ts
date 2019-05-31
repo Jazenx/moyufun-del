@@ -35,6 +35,3 @@ export function route(path, query) {
     hashHistory.push(location)
   }
 }
-
-interface Bar{}
-const bar = Bar
