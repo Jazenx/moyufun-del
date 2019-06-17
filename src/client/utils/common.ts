@@ -1,4 +1,6 @@
-import { browerHistory, hashHistory } from 'react-router'
+import * as router from 'react-router'
+
+const { browerHistory, hashHistory } = router
 
 /**
  *枚举常量函数
@@ -7,20 +9,19 @@ import { browerHistory, hashHistory } from 'react-router'
  * @param {Array} args
  * @returns{Object}
  */
-export function enumConstants(...args) {
-  const constants = {}
-  Object.keys(args).forEach((key) => {
-    constants[args[key]] = args[key]
-  })
-  return constants
+export function enumConstants<T extends string>(o: Array<T>): { [K in T]: K } {
+  return o.reduce((res, key) => {
+    res[key] = key
+    return res
+  }, Object.create(null))
 }
 
-export function route(path, query) {
+export function route(path: string, query?: any) {
   let location = path
-  const queryArr = []
+  const queryArr: string[] = []
 
   if (query) {
-    Object.keys(query).forEach((key) => {
+    Object.keys(query).forEach((key: any) => {
       queryArr.push(`${key}=${query[key]}`)
     })
   }
